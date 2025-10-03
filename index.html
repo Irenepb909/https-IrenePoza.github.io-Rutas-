@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Documento sin título</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+    function aceptarCookies() {
+        Cookies.set('cookies_aceptadas', 'true', { expires: 365 });
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+    if (Cookies.get('cookies_aceptadas')) {
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+    </script>
+    <style type="text/css">
+
+* { margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.acordeon {height: 400px;
+display: flex;}
+div.acordeon a.uno {background-image: url(imagenes/paisaje1.jpg);}
+div.acordeon a.dos {background-image: url(imagenes/paisaje2.jpg);}
+div.acordeon a.tres {background-image: url(imagenes/paisaje3.jpg);}
+div.acordeon a.cuatro {background-image: url(imagenes/paisaje4.jpg);}
+div.acordeon a.cinco {background-image: url(imagenes/paisaje5.jpg);}
+div.acordeon a{
+    background-size: cover;
+    flex: 1;
+    color:white;
+    transition:all 1s;
+    text-decoration: none;
+    background-position: center center;
+    
+}
+div.acordeon a:hover{
+    flex:3;
+     
+}
+div.acordeon a div{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 1s;
+}
+div.acordeon a div:hover{
+    opacity: 1;
+}
+div.acordeon a.uno {background-image: url(imagenesestaciones/frutootoño.jpg);}
+div.acordeon a.dos {background-image: url(imagenesestaciones/nieve1.jpg);}
+div.acordeon a.tres {background-image: url(imagenesestaciones/flor.jpg);}
+div.acordeon a.cuatro {background-image: url(imagenesestaciones/rio.jpg);}
+
+@media (max-width:500px){
+    div.acordeon{
+        flex-direction: column;
+    }
+
+}
+</style>
+</head>
+<body>
+<div class="acordeon">
+    <a href="otoño.html" class="uno">
+        <div>
+            <h2>Rutas Otoño</h2>
+        </div>
+    </a>
+    <a href="invierno.html" class="dos">
+        <div>
+            <h2>Rutas invierno</h2>
+        </div>
+    </a>
+    <a href="rutaprimavera.html" class="tres">
+        <div>
+            <h2>Rutas primavera</h2>
+        </div>
+    </a>
+    <a href="rutasverano.html" class="cuatro">
+        <div>
+            <h2>Rutas verano</h2>
+        </div>
+    </a>
+
+</div>
+<div id="cookie-banner" class="position-fixed bottom-0 start-0 w-100 bg-dark text-white p-3 d-flex justify-content-between align-items-center">
+    <div>
+        Este sitio usa cookies para mejorar la experiencia del usuario. 
+        <a href="Politica de cookies.html">Más información</a>
+    </div>
+    <div>
+        <button button class="btn btn-primary m-2" style="color: white;" onclick="aceptarCookies()">Aceptar</button>
+        <button class="btn btn-danger m-2" onclick="rechazarCookies()">Rechazar</button>
+    </div>
+</div>
+<script>
+  function aceptarCookies() {
+      document.cookie = "cookies_aceptadas=true; expires=Fri, 31 Dec 2099 23:59:59 GMT; path=/";
+      document.getElementById("cookie-banner").classList.add("d-none");
+  }
+
+  function rechazarCookies() {
+      document.cookie = "cookies_aceptadas=false; expires=Fri, 31 Dec 2099 23:59:59 GMT; path=/";
+      document.getElementById("cookie-banner").classList.add("d-none");
+  }
+
+  function obtenerCookie(nombre) {
+      let cookies = document.cookie.split("; ");
+      for (let i = 0; i < cookies.length; i++) {
+          let cookie = cookies[i].split("=");
+          if (cookie[0] === nombre) {
+              return cookie[1];
+          }
+      }
+      return null;
+  }
+
+  // Ocultar el banner si ya se ha aceptado o rechazado
+  if (obtenerCookie("cookies_aceptadas")) {
+      document.getElementById("cookie-banner").classList.add("d-none");
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

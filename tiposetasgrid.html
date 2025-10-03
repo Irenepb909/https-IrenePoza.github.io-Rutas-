@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Documento sin título</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.all.min.js"></script>
+    <script>
+      
+         var mensaje_web="¡ADVERTENCIA!: Nunca consuma una seta que no haya sido previamente identificada y de la que, por tanto, se desconoce su seguridad. Esta es una información orientativa. "
+         alert(mensaje_web); 
+      
+     </script>
+    <style type="text/css">
+      
+      *{
+        margin:0;
+        padding:0;
+        font-family:Arial, Helvetica, sans-serif;
+      
+      }
+    
+      #contenedor a{
+        height: 150px;
+        margin-left: 40px;
+        color: rgba(88, 45, 9, 0.932);
+        font-weight: bold;
+        text-decoration: none;
+        
+        
+      }
+        #contenido{
+     
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        background-color: rgba(179, 146, 119, 0.932);
+        border-radius: 10px;
+        
+      }
+
+ p{ padding:10px 0 10px 0;
+      margin: 20px;
+      
+     }
+h1{margin:20px;}
+
+#principal {
+        width:56%;
+        padding:2%;
+        float:left;
+        margin-top: 20px;
+        
+        border-right: 0px;
+      }
+      #principal img{
+        width:100%;
+        height:100%;
+        border-radius:0 0 0 40px;
+      }
+      #secundario {
+    width:36%;
+    padding:2%;
+    min-width: 200px;
+    float:left;
+  }
+      #pie{
+        color: rgba(88, 45, 9, 0.932);
+        padding:10px;
+        clear:left;
+        font-weight: bold;
+      }
+     
+      img {
+  border-radius: 10px; /* Ajusta el valor según lo que necesites */
+  object-fit: cover; /* Asegura que las imágenes mantengan su proporción y rellenen el contenedor */
+}
+     
+  
+
+  .imagenes a{
+    transition: all 1s;
+    background-size: cover;
+    background-position: center center;
+    margin: 4px;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+    text-align: center;
+    padding: 100px;
+  
+    
+  }
+   .imagenes{
+    width: 900px;
+    height: 500px;
+   display: grid;
+   margin: 20px;
+  
+   
+   }
+  .uno{ background-image: url(imagenesestaciones/Seta1manchas.jpg);
+    grid-row: 1/3;
+    grid-column: 1/4;
+   
+    }
+    
+  
+  .dos{background-image: url(imagenesestaciones/seta6amanita.jpg);
+    grid-row: 3/5;
+    grid-column: 4/6;
+    
+    }
+
+  .tres{ background-image: url(imagenesestaciones/seta3.jpg);
+    grid-row:3/5 ;
+    grid-column: 1/4;}
+    .cuatro{ 
+    background-image: url(imagenesestaciones/seta4.jpg);
+    grid-row:1/3 ;
+    grid-column:4/6 ;
+    } 
+    .cinco{ 
+    background-image: url(imagenesestaciones/seta5.jpg);
+    grid-row:1/3 ;
+    grid-column:6/8 ;
+    }
+.seis{ 
+    background-image: url(imagenesestaciones/seta9.jpg);
+    grid-row: 3/5;
+    grid-column:6/8 ;
+    }
+    a:hover{
+      rotate:0deg !important;
+      scale:1.2;
+      z-index: 1;
+      opacity: 0.8;
+    }
+    .lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-content {
+  max-width: 90%;  /* Cambiado de 80% a 90% para más espacio */
+  max-height: 90%; /* Cambiado de 80% a 90% para más espacio */
+  object-fit: contain; /* Mantener las proporciones de la imagen */
+  display: block;
+  margin: auto;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+    @media screen and (max-width: 768px) {
+      .imagenes {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      .imagenes {
+        grid-template-columns: 1fr;
+      }
+    }
+/*   
+      @media only screen and (max-width:850px) and (min-width:651px) {
+  
+    #contenido{
+      width: 900px;
+    height: 500px;}
+    display: grid;
+    }
+    #principal{
+        width:46%;
+        padding:2%;
+        justify-content: space-between;
+    }
+  
+}
+@media only screen and (max-width:400px){
+    #menu{ width: 100%;  }
+    #cabecera a{display:none;}
+    #menu ul li {
+        width: 100%;
+        text-align: center;}
+    #menu ul li:last-child a{
+        border-radius: 0;
+    }
+    #principal img{border-radius:0;}
+    #contenido{
+        width: 100%;
+       
+    }
+    #principal,#secundario {
+       
+        width:96%;
+        padding:2%;
+      text-align: center;
+      margin-left: -10px;
+      
+    }
+   #advertencias img{width:30%;
+  justify-content: space-around;}
+  
+} */
+
+      
+    </style>
+  </head>
+
+  <body>
+    
+    <div id="contenedor">
+      <div id="galeria">
+      <a href="otoño.html">Volver</a>
+      </div>
+      </div>
+      <div id="contenido">
+        <div id="principal">
+          <h1>Setas en Otoño: Un Tesoro Natural</h1>
+          <p>El otoño es la estación perfecta para descubrir la gran variedad de setas que crecen en los bosques y campos de nuestra región. Gracias a la humedad y las temperaturas moderadas, los hongos comienzan a fructificar en abundancia, ofreciendo un espectáculo fascinante para los amantes de la naturaleza y la micología.
+
+            En esta época, las especies más comunes como las setas de cardo, los boletus y las amanitas pueden encontrarse en senderos y zonas boscosas. Es importante recordar que, aunque el otoño es una temporada excelente para recolectar setas, siempre se debe contar con la guía de un experto para evitar posibles confusiones con especies tóxicas.
+            
+            </p>
+       
+        
+          <div class="imagenes">
+            <a href="#" class="uno"style="border-radius:10px" data-image="imagenesestaciones/Seta1manchas.jpg">Macrolepiota</a>
+            <a href="#" class="dos"style="border-radius:10px" data-image="imagenesestaciones/seta6amanita.jpg">Amanita muscaria</a>
+            <a href="#" class="tres"style="border-radius:10px" data-image="imagenesestaciones/seta3.jpg">Gymnopilus spp</a>
+            <a href="#" class="cuatro"style="border-radius:10px" data-image="imagenesestaciones/seta4.jpg">Macrolepiota</a>
+            <a href="#" class="cinco"style="border-radius:10px" data-image="imagenesestaciones/seta5.jpg">Volvopluteus gloiocephalus</a>
+            <a href="#" class="seis"style="border-radius:10px" data-image="imagenesestaciones/seta9.jpg">Agaricus arvensis</a>
+          </div>
+      </div>
+    </div>
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-image">
+    </div>
+  </div>
+   <p id="pie"> © Sociedad Micológica de Segovia - 2001 - Aviso Legal - Política de Privacidad</p>
+    </div>
+    <script>
+      // Obtén todos los enlaces de la galería
+      var galleryLinks = document.querySelectorAll('.imagenes a');
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImage = document.getElementById('lightbox-image');
+      var closeButton = document.querySelector('.close');
+
+      // Función para abrir la imagen en el lightbox
+      galleryLinks.forEach(function(link) {
+        link.onclick = function(event) {
+          event.preventDefault(); // Prevenir el comportamiento predeterminado (enlace)
+          var imageUrl = link.getAttribute('data-image'); // Obtener la URL de la imagen
+          lightbox.style.display = 'flex'; // Mostrar el lightbox
+          lightboxImage.src = imageUrl; // Cambiar la imagen en el lightbox
+        };
+      });
+
+      // Función para cerrar el lightbox
+      closeButton.onclick = function() {
+        lightbox.style.display = 'none';
+      };
+
+      // Cerrar el lightbox si se hace clic fuera de la imagen
+      lightbox.onclick = function(event) {
+        if (event.target === lightbox) {
+          lightbox.style.display = 'none';
+        }
+      };
+    </script>
+  </body>
+</html>
